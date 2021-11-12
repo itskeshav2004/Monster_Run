@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded = true;
     private string groundTag = "Ground";
 
+    private string enemyTag = "Enemy";
+
     private SpriteRenderer sr;
     private Rigidbody2D myBody;
 
@@ -80,6 +82,18 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag(groundTag))
         {
             isGrounded = true;
+        }
+
+        if(collision.gameObject.CompareTag(enemyTag)){
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag(enemyTag))
+        {
+            Destroy(gameObject);
         }
     }
 }
