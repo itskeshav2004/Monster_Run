@@ -57,6 +57,7 @@
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Monster.cs" />
     <Compile Include="Assets\Scripts\MonsterSpawner.cs" />
+    <Compile Include="Assets\Scripts\Collector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fonts\font info.txt" />
